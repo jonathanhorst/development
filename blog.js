@@ -1,8 +1,9 @@
 $(document).ready(function() {
-  var navigation = $('[role="navigation"]');
   var list = $('[role="list"]');
-
-  if (list.children().length <= 25) {
-    navigation.addClass("hide");
-  }
+  list.each(function() {
+    var navigation = $(this).siblings('[role="navigation"]');
+    if ($(this).children().length <= 25) {
+      navigation.addClass("hide");
+    }
+  });
 });

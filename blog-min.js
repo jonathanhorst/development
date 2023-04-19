@@ -1,1 +1,1 @@
-$(document).ready((function(){var e=$('[role="navigation"]');$('[role="list"]').children().length<=25&&e.addClass("hide")}));
+$(document).ready((function(){$('[role="list"]').each((function(){var i=$(this).siblings('[role="navigation"]');$(this).children().length<=25&&i.addClass("hide")}))}));
