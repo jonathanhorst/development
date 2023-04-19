@@ -1,0 +1,101 @@
+@mixin breakpoint($point) {
+  @if $point==base {
+    @media (min-width: 992px) and (max-width: 1279px) {
+      @content;
+    }
+  }
+  @if $point==delta {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+  @if $point==gamma {
+    @media (min-width: 1320px) {
+      @content;
+    }
+  }
+  @if $point==beta {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+  @if $point==alpha {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+  @if $point==epsilon {
+    @media (max-width: 991px) {
+      @content;
+    }
+  }
+  @if $point==zeta {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  @if $point==eta {
+    @media (max-width: 479px) {
+      @content;
+    }
+  }
+}
+
+body {
+  opacity: 0;
+  transition: opacity 100ms ease-out
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.is-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+}
+input,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+.modal-opt-in_component {
+  display: none;
+}
+[th-member="bio"] {
+  // transform: translate(0px, 101%);
+  @include breakpoint(delta) {}
+  @include breakpoint(gamma) {}
+  @include breakpoint(beta) {}
+  @include breakpoint(alpha) {}
+  @include breakpoint(delta) {}
+  @include breakpoint(epsilon) {}
+  @include breakpoint(zeta) {
+    // transform: translate(-100%, 0px);
+  }
+  @include breakpoint(eta) {}
+  &.is-active {
+    // transform: translate(0%, 0%);
+  }
+}
+[th-member="trigger-icon"].is-active {
+  // color: var(--color-white);
+  // transform: rotate(45deg);
+  @include breakpoint(delta) {}
+  @include breakpoint(gamma) {}
+  @include breakpoint(beta) {}
+  @include breakpoint(alpha) {}
+  @include breakpoint(delta) {}
+  @include breakpoint(epsilon) {}
+  @include breakpoint(zeta) {
+    // color: var(--color-text);
+    // transform: unset;
+
+  }
+  @include breakpoint(eta) {}
+}

@@ -1,0 +1,1 @@
+$(document).ready((function(){var e=$('[role="navigation"]');$('[role="list"]').children().length<=25&&e.addClass("hide")}));
