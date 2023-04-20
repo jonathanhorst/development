@@ -146,6 +146,7 @@ $color-primary-900: 0,
   --header-padding-vertical: 1rem;
   --header-navbar-top-height: 0.5rem + (1rem * 1.4);
   --header-height: calc(var(--header-logo-height) + 0.75rem + (var(--header-padding-vertical) * 2));
+  --header-spacing: var(--header-height);
 
   --transition-property: color, background-color, background, border, filter;
   --transition-duration: 500ms, 600ms, 600ms, 600ms;
@@ -175,6 +176,15 @@ $color-primary-900: 0,
 
   }
 }
+
+@include breakpoint(delta) {}
+@include breakpoint(gamma) {}
+@include breakpoint(beta) {}
+@include breakpoint(alpha) {}
+@include breakpoint(delta) {}
+@include breakpoint(epsilon) {}
+@include breakpoint(zeta) {}
+@include breakpoint(eta) {}
 
 HTML {
   font-size: 16px;
@@ -494,6 +504,35 @@ body {
   background-position: 0 0.92em;
   background-repeat: repeat-x;
   background-size: 1px 8px;
+}
+
+.heading {
+  &-style {
+    &-h1 {
+      @include breakpoint(delta) {
+        font-size: max(10vh, 5.5rem);
+      }
+      @include breakpoint(gamma) {}
+      @include breakpoint(beta) {}
+      @include breakpoint(alpha) {}
+      @include breakpoint(delta) {}
+      @include breakpoint(epsilon) {}
+      @include breakpoint(zeta) {}
+      @include breakpoint(eta) {}
+    }
+    &-h2 {
+      @include breakpoint(delta) {
+        font-size: max(8vh, 5rem);
+      }
+      @include breakpoint(gamma) {}
+      @include breakpoint(beta) {}
+      @include breakpoint(alpha) {}
+      @include breakpoint(delta) {}
+      @include breakpoint(epsilon) {}
+      @include breakpoint(zeta) {}
+      @include breakpoint(eta) {}
+    }
+  }
 }
 
 .navbar {
@@ -999,7 +1038,7 @@ body {
   }
   &_sticky-navigation {
     position: sticky;
-    top: var(--header-height);
+    top: var(--header-spacing);
     z-index: 3;
     background-color: var(--overlay-background);
     backdrop-filter: var(--background-blur);
@@ -1223,7 +1262,8 @@ div[class^=ratio]>div {
 }
 
 .container-carousel {
-  padding: calc(var(--header-height) + 1px) var(--container-padding) var(--container-padding) var(--container-padding);
+  // padding: calc(var(--header-height) + 1px) var(--container-padding) var(--container-padding) var(--container-padding);
+  padding: var(--container-padding);
   @include breakpoint(delta) {}
   @include breakpoint(gamma) {
     padding-bottom: var(--header-height);
@@ -1233,6 +1273,10 @@ div[class^=ratio]>div {
   @include breakpoint(delta) {}
   @include breakpoint(epsilon) {}
   @include breakpoint(zeta) {}
+  @media (max-height: 850px) {
+    padding-top: 1rem;
+    grid-row-gap: 3rem;
+  }
 }
 .home-merge_panel {
   // position: relative;
@@ -1373,12 +1417,12 @@ div[class^=ratio]>div {
     visibility: hidden;
   }
 
-  > textarea {
+  >textarea {
     resize: none;
     overflow: hidden;
   }
 
-  > textarea,
+  >textarea,
   &::after {
     font-size: 1 !important;
     line-height: 1em !important;
@@ -1388,14 +1432,14 @@ div[class^=ratio]>div {
   }
 
   @media(max-width: 991px) {
-    > textarea,
+    >textarea,
     &::after {
       // font-size: 1.5rem;
     }
   }
 
   @media(max-width: 479px) {
-    > textarea,
+    >textarea,
     &::after {
       // font-size: 1rem;
     }

@@ -33,6 +33,7 @@
   --header-padding-vertical: 1rem;
   --header-navbar-top-height: 0.5rem + (1rem * 1.4);
   --header-height: calc(var(--header-logo-height) + 0.75rem + (var(--header-padding-vertical) * 2));
+  --header-spacing: var(--header-height);
   --transition-property: color, background-color, background, border, filter;
   --transition-duration: 500ms, 600ms, 600ms, 600ms;
   --transition-timing: ease-out, ease-out, ease-out, ease-out;
@@ -356,6 +357,16 @@ body.is-black {
   background-size: 1px 8px;
 }
 
+@media (min-width: 1280px) {
+  .heading-style-h1 {
+    font-size: max(10vh, 5.5rem);
+  }
+}
+@media (min-width: 1280px) {
+  .heading-style-h2 {
+    font-size: max(8vh, 5rem);
+  }
+}
 .navbar_component {
   background-color: unset;
 }
@@ -668,7 +679,7 @@ body:not(.is-black) .section_technology-features img {
 .section_sticky-navigation {
   position: -webkit-sticky;
   position: sticky;
-  top: var(--header-height);
+  top: var(--header-spacing);
   z-index: 3;
   background-color: var(--overlay-background);
   -webkit-backdrop-filter: var(--background-blur);
@@ -803,13 +814,20 @@ div[class^=ratio] > div {
 }
 
 .container-carousel {
-  padding: calc(var(--header-height) + 1px) var(--container-padding) var(--container-padding) var(--container-padding);
+  padding: var(--container-padding);
 }
 @media (min-width: 1320px) {
   .container-carousel {
     padding-bottom: var(--header-height);
   }
 }
+@media (max-height: 850px) {
+  .container-carousel {
+    padding-top: 1rem;
+    grid-row-gap: 3rem;
+  }
+}
+
 .home-merge_panel {
   grid-template-areas: ". Text Text Text Text . wallet-container-2 wallet-container-2 wallet-container-2 . ." ". . wallet-container-3 wallet-container-3 wallet-container-3 . . . wallet-container-4 wallet-container-4 wallet-container-4";
 }

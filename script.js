@@ -122,23 +122,32 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
 
+// Create a gsap.matchMedia object to match the specified media query
 let mm = gsap.matchMedia();
 
+// Add a listener for the media query (min-width: 768px)
 mm.add("(min-width: 768px)", () => {
 
-
-
+  // Function to initialize the cards animation
   function initCards(direction) {
+    // Select all elements with attribute 'th-{direction}-cards' set to 'component'
     let components = $(`[th-${direction}-cards='component']`);
 
+    // Iterate over each component
     components.each(function() {
+      // Select the current component, wrapper, and panel elements
       let component = $(this);
       let wrapper = component.find(`[th-${direction}-cards='wrapper']`);
       let panel = component.find(`[th-${direction}-cards='panel']`);
+
+      // Calculate the dimensions of the parent and panel elements based on the direction
       let parentDimension = wrapper[direction === 'horizontal' ? 'width' : 'height']();
       let panelDimension = panel[direction === 'horizontal' ? 'width' : 'height']();
+
+      // Calculate the distance to move based on the direction
       let moveDistance = direction === 'horizontal' ? parentDimension - panelDimension : panelDimension - parentDimension;
 
+      // Create a new gsap timeline with a scroll trigger
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: component,
@@ -150,6 +159,7 @@ mm.add("(min-width: 768px)", () => {
         },
       });
 
+      // Animate the panel element based on the direction
       tl.to(panel, {
         [direction === 'horizontal' ? 'x' : 'y']: direction === 'horizontal' ? moveDistance : -moveDistance,
         delay: 0.025,
@@ -158,14 +168,15 @@ mm.add("(min-width: 768px)", () => {
     });
   }
 
+  // Add an event listener for when the DOM is fully loaded
   window.addEventListener("DOMContentLoaded", (event) => {
+    // Initialize the cards animations for both horizontal and vertical directions
     initCards('horizontal');
     initCards('vertical');
   });
 
-
-
 })
+
 
 
 
@@ -348,4 +359,42 @@ $(document).ready(function() {
       });
     });
   }
+});
+
+
+
+
+$(document).ready(() => {
+  const banner = $("[role='banner']");
+  const bannerHeight = banner.outerHeight();
+  let scrollTop = 0;
+
+  const headerSpacingElements = $(".section_sticky-navigation");
+  const headerSpacingValue = getComputedStyle(document.documentElement).getPropertyValue('--header-spacing').trim();
+
+  gsap.set(headerSpacingElements, { top: headerSpacingValue });
+
+  const tl = gsap.timeline({
+      paused: true,
+      defaults: {
+        duration: 0.3,
+        ease: "power2.out"
+      }
+    })
+    .to(banner, { yPercent: -100 })
+    .to(headerSpacingElements, { top: '0px' }, 0);
+
+  const handleScroll = () => {
+    const currentScrollTop = $(window).scrollTop();
+
+    if (currentScrollTop > scrollTop && currentScrollTop > bannerHeight) {
+      tl.play();
+    } else if (scrollTop - currentScrollTop > 2) {
+      tl.reverse();
+    }
+
+    scrollTop = currentScrollTop;
+  };
+
+  $(window).on("scroll", handleScroll);
 });
