@@ -307,6 +307,14 @@ main:focus-visible {
   outline: -webkit-focus-ring-color auto 0px;
 }
 
+// Define a mixin for common styles
+@mixin common-styles {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+// Define the container styles
 .container-medium,
 .container-small,
 .container-large {
@@ -314,18 +322,15 @@ main:focus-visible {
   margin-left: auto !important;
 }
 
+// Use the mixin for text styles
 .text-style-3lines {
-  display: -webkit-box;
-  overflow: hidden;
+  @include common-styles;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
 }
 
 .text-style-2lines {
-  display: -webkit-box;
-  overflow: hidden;
+  @include common-styles;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 
 .text-style-hanging {
@@ -450,6 +455,10 @@ main:focus-visible {
 .padding-vertical {
   padding-right: 0rem !important;
   padding-left: 0rem !important;
+  &.padding-hero-top {
+    padding-top: 16vh;
+    padding-top: 16dvh;
+  }
 }
 
 .is-sticky {
@@ -718,6 +727,25 @@ body {
 }
 
 .hero-image {
+  &_component {
+    min-height: 100vh;
+    min-height: 100dvh;
+    @include breakpoint(delta) {}
+    @include breakpoint(gamma) {}
+    @include breakpoint(beta) {}
+    @include breakpoint(alpha) {}
+    @include breakpoint(delta) {}
+    @include breakpoint(epsilon) {}
+    @include breakpoint(zeta) {}
+    @include breakpoint(eta) {
+      min-height: unset;
+    }
+  }
+  &_wrapper {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+  }
   &_background-container {
     @media screen and (min-width: 112rem + 2.5rem * 2) {
       width: auto;
@@ -732,6 +760,7 @@ body {
   @include breakpoint(delta) {}
   @include breakpoint(epsilon) {}
   @include breakpoint(zeta) {}
+
 }
 
 .home {
@@ -803,9 +832,12 @@ body {
           //   border-top: 1px solid;
           // }
           &:nth-child(odd) {
-            border-right: unset;
+            border-right-style: unset;
           }
           &:nth-child(even) {
+            border-right-style: solid;
+          }
+          &:last-of-type {
             border-right-style: solid;
           }
         }
@@ -1056,6 +1088,16 @@ body {
         background-color: var(--color-neutral-800);
       }
     }
+  }
+}
+.solution-hero {
+  &_component {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  &_wrapper {
+    min-height: 100vh;
+    min-height: 100dvh;
   }
 }
 .horizontal-carousel {

@@ -196,15 +196,15 @@ main:focus-visible {
 .text-style-3lines {
   display: -webkit-box;
   overflow: hidden;
-  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .text-style-2lines {
   display: -webkit-box;
   overflow: hidden;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .text-style-hanging {
@@ -326,6 +326,10 @@ main:focus-visible {
 .padding-vertical {
   padding-right: 0rem !important;
   padding-left: 0rem !important;
+}
+.padding-vertical.padding-hero-top {
+  padding-top: 16vh;
+  padding-top: 16dvh;
 }
 
 body {
@@ -463,6 +467,19 @@ body.is-black {
   z-index: 2;
 }
 
+.hero-image_component {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+@media (max-width: 479px) {
+  .hero-image_component {
+    min-height: unset;
+  }
+}
+.hero-image_wrapper {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
 @media screen and (min-width: 117rem) {
   .hero-image_background-container {
     width: auto;
@@ -505,9 +522,12 @@ body.is-black {
 
 @media (max-width: 991px) {
   .company-investors_investor-bottom:nth-child(odd) {
-    border-right: unset;
+    border-right-style: unset;
   }
   .company-investors_investor-bottom:nth-child(even) {
+    border-right-style: solid;
+  }
+  .company-investors_investor-bottom:last-of-type {
     border-right-style: solid;
   }
 }
@@ -694,6 +714,15 @@ body:not(.is-black) .section_technology-features img {
 }
 body.is-black .section_solution-form .component_contact-form_right-column {
   background-color: var(--color-neutral-800);
+}
+
+.solution-hero_component {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+.solution-hero_wrapper {
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .horizontal-carousel_wrapper.is-layout-1 .card {

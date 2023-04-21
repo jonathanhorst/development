@@ -11,7 +11,7 @@ mmCompany1.add("(min-width: 768px)", () => {
       let triggerIcon = trigger.find("[th-member='trigger-icon']");
 
       // Set the initial state of the bio element
-      gsap.set(bio, { yPercent: 100, opacity: 1 });
+      gsap.set(bio, { yPercent: 101, opacity: 1 });
 
       let tl = gsap.timeline({ paused: true });
 
@@ -67,7 +67,7 @@ mmCompany2.add("(max-width: 767px)", () => {
       let bio = trigger.next("[th-member='bio']");
       let closeIcon = bio.find("[th-member='close-icon']");
 
-      gsap.set(bio, { xPercent: -100, opacity: 1 });
+      gsap.set(bio, { xPercent: -101, opacity: 1 });
 
       let tl = gsap.timeline({ paused: true });
 
