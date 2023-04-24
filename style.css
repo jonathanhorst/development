@@ -850,7 +850,7 @@ div[class^=ratio] > div {
     padding-bottom: var(--header-height);
   }
 }
-@media (max-height: 850px) {
+@media (max-height: 850px) and (orientation: landscape) {
   .container-carousel {
     padding-top: 1rem;
     grid-row-gap: 3rem;

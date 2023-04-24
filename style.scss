@@ -1315,7 +1315,7 @@ div[class^=ratio]>div {
   @include breakpoint(delta) {}
   @include breakpoint(epsilon) {}
   @include breakpoint(zeta) {}
-  @media (max-height: 850px) {
+  @media (max-height: 850px) and (orientation: landscape) {
     padding-top: 1rem;
     grid-row-gap: 3rem;
   }
