@@ -344,7 +344,7 @@ $(document).ready(function() {
 
 
 
-// for textarea grow
+// form textarea grow
 $(document).ready(function() {
   var growWrapTextareas = $("textarea[th-textarea='grow-wrap']");
 
@@ -364,6 +364,7 @@ $(document).ready(function() {
 
 
 
+// navbar move and sticky css variable resize
 $(document).ready(() => {
   const banner = $("[role='banner']");
   const bannerHeight = banner.outerHeight();
