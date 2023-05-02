@@ -988,7 +988,28 @@ body {
     position: static;
   }
   &_home-secure {}
-  &_home-friendly {}
+  &_home-friendly {
+    .card {
+
+      img {
+        // position: relative;
+        @extend .transition;
+        // &:after {
+        //   position: absolute;
+        //   top: 0;
+        //   right: 0;
+        //   bottom: 0;
+        //   left: 0;
+        //   content: '';
+        //   z-index: 2;
+        //   background-color: var(--color-text);
+        // }
+        @at-root body:not(.is-blue) & {
+          filter: invert(1);
+        }
+      }
+    }
+  }
   &_cta-summary {
     .card {
       padding: 2vw;
