@@ -515,6 +515,10 @@ body {
   background-size: 1px 8px;
 }
 
+blockquote p {
+  hanging-punctuation: first;
+}
+
 .heading {
   &-style {
     &-h1 {
@@ -531,11 +535,13 @@ body {
     }
     &-h2 {
       @include breakpoint(delta) {
-        font-size: max(8vh, 5rem);
+        font-size: max(8vmin, 5rem);
       }
       @include breakpoint(gamma) {}
       @include breakpoint(beta) {}
-      @include breakpoint(alpha) {}
+      @include breakpoint(alpha) {
+        font-size: 7rem;
+      }
       @include breakpoint(delta) {}
       @include breakpoint(epsilon) {}
       @include breakpoint(zeta) {}
@@ -744,14 +750,18 @@ body {
   &_wrapper {
     min-height: 100vh;
     min-height: 100dvh;
-
   }
   &_background-container {
+    max-width: inherit;
     @media screen and (min-width: 112rem + 2.5rem * 2) {
       width: auto;
       height: 70vh;
       right: calc(2.5rem + (50vw - (112rem / 2)));
     }
+  }
+  &_content {
+  @include breakpoint(delta) {}
+
   }
   @include breakpoint(delta) {}
   @include breakpoint(gamma) {}
