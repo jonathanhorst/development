@@ -149,7 +149,7 @@ $color-primary-900: 0,
   --header-spacing: var(--header-height);
 
   --transition-property: color, background-color, background, border, filter, opacity;
-  --transition-duration: 500ms, 600ms, 600ms, 600ms, 300ms;
+  --transition-duration: 500ms, 600ms, 600ms, 600ms, 100ms;
   --transition-timing: ease-out, ease-out, ease-out, ease-out, ease-out;
 
   @include breakpoint(delta) {}
