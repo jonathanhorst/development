@@ -148,9 +148,9 @@ $color-primary-900: 0,
   --header-height: calc(var(--header-logo-height) + 0.75rem + (var(--header-padding-vertical) * 2));
   --header-spacing: var(--header-height);
 
-  --transition-property: color, background-color, background, border, filter;
-  --transition-duration: 500ms, 600ms, 600ms, 600ms;
-  --transition-timing: ease-out, ease-out, ease-out, ease-out;
+  --transition-property: color, background-color, background, border, filter, opacity;
+  --transition-duration: 500ms, 600ms, 600ms, 600ms, 300ms;
+  --transition-timing: ease-out, ease-out, ease-out, ease-out, ease-out;
 
   @include breakpoint(delta) {}
   @include breakpoint(gamma) {
@@ -1519,9 +1519,9 @@ div[class^=ratio]>div {
   }
 }
 
-body {
-  opacity: 1;
-}
+// body {
+//   opacity: 1;
+// }
 
 .table-responsive {
   width: 100%;
