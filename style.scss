@@ -1289,50 +1289,50 @@ blockquote p {
 // .ratio-2-3::before {
 //   --aspect-ratio: 2/3;
 // }
-.ratio-3-2::before {
-  --aspect-ratio: 3/2;
-}
+// .ratio-3-2::before {
+//   --aspect-ratio: 3/2;
+// }
 // .ratio-16-9::before {
 //   --aspect-ratio: 16/9;
 // }
-.ratio-1792-1120::before {
-  --aspect-ratio: 1792/1120;
-}
+// .ratio-1792-1120::before {
+//   --aspect-ratio: 1792/1120;
+// }
 // .ratio-9-16::before {
 //   --aspect-ratio: 9/16;
 // }
 
-div[class^=ratio] {
-  position: relative;
-  overflow: hidden;
-}
-div[class^=ratio]::before {
-  content: "";
-  display: inline-block;
-  width: 1px;
-  height: 0;
-  padding-bottom: calc(100% / (var(--aspect-ratio)));
-}
-div[class^=ratio]>div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-*[aspect-ratio] {
-  vertical-align: unset;
-  object-fit: cover;
-}
-*[aspect-ratio="1/1"] {
-  aspect-ratio: 1 / 1;
-}
-*[aspect-ratio="3/2"] {
-  aspect-ratio: 3 / 2;
-}
-*[aspect-ratio="16/9"] {
-  aspect-ratio: 16 / 9;
-}
+// div[class^=ratio] {
+//   position: relative;
+//   overflow: hidden;
+// }
+// div[class^=ratio]::before {
+//   content: "";
+//   display: inline-block;
+//   width: 1px;
+//   height: 0;
+//   padding-bottom: calc(100% / (var(--aspect-ratio)));
+// }
+// div[class^=ratio]>div {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+// }
+// *[aspect-ratio] {
+//   vertical-align: unset;
+//   object-fit: cover;
+// }
+// *[aspect-ratio="1/1"] {
+//   aspect-ratio: 1 / 1;
+// }
+// *[aspect-ratio="3/2"] {
+//   aspect-ratio: 3 / 2;
+// }
+// *[aspect-ratio="16/9"] {
+//   aspect-ratio: 16 / 9;
+// }
 
 .container-carousel {
   // padding: calc(var(--header-height) + 1px) var(--container-padding) var(--container-padding) var(--container-padding);
@@ -1523,33 +1523,33 @@ div[class^=ratio]>div {
 //   opacity: 1;
 // }
 
-.table-responsive {
-  width: 100%;
-  border-collapse: collapse;
+// .table-responsive {
+//   width: 100%;
+//   border-collapse: collapse;
   
-  th, td {
-    border: 1px solid var(--color-primary-300);
-    padding: 0.75rem;
+//   th, td {
+//     border: 1px solid var(--color-primary-300);
+//     padding: 0.75rem;
     
-    @include breakpoint(epsilon) {
-      padding: 0.5rem;
-    }
+//     @include breakpoint(epsilon) {
+//       padding: 0.5rem;
+//     }
     
-    @include breakpoint(zeta) {
-      display: block;
-      width: 100%;
+//     @include breakpoint(zeta) {
+//       display: block;
+//       width: 100%;
       
-      &:first-child {
-        margin-top: 0.5rem;
-      }
+//       &:first-child {
+//         margin-top: 0.5rem;
+//       }
       
-      &:last-child {
-        margin-bottom: 0.5rem;
-      }
-    }
-  }
+//       &:last-child {
+//         margin-bottom: 0.5rem;
+//       }
+//     }
+//   }
   
-  th {
-    background-color: var(--color-primary-50);
-  }
-}
+//   th {
+//     background-color: var(--color-primary-50);
+//   }
+// }
