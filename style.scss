@@ -889,7 +889,7 @@ blockquote p {
 
     }
 
-    h3 {
+    h2,h3,h4,h5,h6 {
       font-size: 1.4375rem;
       line-height: 1.2;
     }
@@ -940,7 +940,7 @@ blockquote p {
     &:last-of-type {
       border-bottom: solid 1px;
     }
-    h3 {
+    h2,h3,h4,h5,h6 {
       font-size: 1.4375rem;
       line-height: 1.2;
     }
