@@ -68,34 +68,23 @@ textarea {
   display: none;
 }
 [th-member="bio"] {
-  // transform: translate(0px, 101%);
   @include breakpoint(delta) {}
   @include breakpoint(gamma) {}
   @include breakpoint(beta) {}
   @include breakpoint(alpha) {}
   @include breakpoint(delta) {}
   @include breakpoint(epsilon) {}
-  @include breakpoint(zeta) {
-    // transform: translate(-100%, 0px);
-  }
+  @include breakpoint(zeta) {}
   @include breakpoint(eta) {}
-  &.is-active {
-    // transform: translate(0%, 0%);
-  }
+  &.is-active {}
 }
 [th-member="trigger-icon"].is-active {
-  // color: var(--color-white);
-  // transform: rotate(45deg);
   @include breakpoint(delta) {}
   @include breakpoint(gamma) {}
   @include breakpoint(beta) {}
   @include breakpoint(alpha) {}
   @include breakpoint(delta) {}
   @include breakpoint(epsilon) {}
-  @include breakpoint(zeta) {
-    // color: var(--color-text);
-    // transform: unset;
-
-  }
+  @include breakpoint(zeta) {}
   @include breakpoint(eta) {}
 }

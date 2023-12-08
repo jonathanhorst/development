@@ -42,72 +42,30 @@
   }
 }
 
-$color-black: 0,
-0,
-0;
-$color-white: 255,
-255,
-255;
-$color-neutral-50: 250,
-250,
-250;
-$color-neutral-100: 245,
-245,
-245;
-$color-neutral-200: 229,
-229,
-229;
-$color-neutral-300: 212,
-212,
-212;
-$color-neutral-400: 163,
-163,
-163;
-$color-neutral-500: 115,
-115,
-115;
-$color-neutral-600: 82,
-82,
-82;
-$color-neutral-700: 64,
-64,
-64;
-$color-neutral-800: 38,
-38,
-38;
-$color-neutral-900: 23,
-23,
-23;
-$color-primary-50: 231,
-239,
-255;
-$color-primary-100: 208,
-223,
-255;
-$color-primary-200: 161,
-191,
-255;
-$color-primary-300: 113,
-159,
-255;
-$color-primary-400: 66,
-127,
-255;
-$color-primary-500: 19,
-95,
-255;
-$color-primary-600: 0,
-74,
-228;
-$color-primary-700: 0,
-59,
-183;
-$color-primary-800: 0,
-44,
-137;
-$color-primary-900: 0,
-29,
-91;
+$color-black: 0,0,0;
+$color-white: 255,255,255;
+$color-neutral-50: 250,250,250;
+$color-neutral-100: 245,245,245;
+$color-neutral-200: 229,229,229;
+$color-neutral-300: 212,212,212;
+$color-neutral-400: 163,163,163;
+$color-neutral-500: 115,115,115;
+$color-neutral-600: 82,82,82;
+$color-neutral-700: 64,64,64;
+$color-neutral-800: 38,38,38;
+$color-neutral-900: 23,23,23;
+$color-primary-50: 231,239,255;
+$color-primary-100: 208,223,255;
+$color-primary-200: 161,191,255;
+$color-primary-300: 113,159,255;
+$color-primary-400: 66,127,255;
+$color-primary-500: 19,95,255;
+$color-primary-600: 0,74,228;
+$color-primary-700: 0,59,183;
+$color-primary-800: 0,44,137;
+$color-primary-900: 0,29,91;
+
+
 
 :root {
   // color-scheme: light dark;
@@ -133,7 +91,7 @@ $color-primary-900: 0,
   --color-primary-700: rgb(#{$color-primary-700});
   --color-primary-800: rgb(#{$color-primary-800});
   --color-primary-900: rgb(#{$color-primary-900});
-  --color-text: var(--color-primary-500);
+  // --color--text: var(--color-primary-500);
   --color-background: var(--color-white);
   --color-background-rbga: #{$color-white};
   --background-blur: blur(20px);
@@ -173,7 +131,6 @@ $color-primary-900: 0,
     --header-padding-vertical: 1rem;
     --border-radius-large: 2rem;
     --header-logo-height: 1rem;
-
   }
 }
 
@@ -193,7 +150,7 @@ HTML {
 
 ::selection {
   color: var(--color-background);
-  background: var(--color-text);
+  background: var(--color--text);
 }
 
 .scrollbar {
@@ -205,7 +162,7 @@ HTML {
     background: var(--color-background);
   }
   &::-webkit-scrollbar-thumb {
-    background: var(--color-text);
+    background: var(--color--text);
     border-radius: 4px;
     box-shadow: rgba(0, 4, 255, 0.2) 0px 1px 8px;
   }
@@ -267,7 +224,7 @@ a,
 // .w-select,
 // .w-input::-webkit-input-placeholder,
 // .w-select::-webkit-input-placeholder {
-// color: var(--color-text);
+// color: var(--color--text);
 // }
 
 blockquote,
@@ -475,17 +432,17 @@ body {
   @extend .transition;
   @extend .scrollbar;
   font-variation-settings: "wght"400;
-  color: var(--color-text);
+  color: var(--color--text);
   &.is-blue {
     --color-background-rbga: #{$color-primary-500};
     --overlay-background: rgba(var(--color-background-rbga), 0.7);
-    --color-text: var(--color-white);
+    --color--text: var(--color-white);
     --color-background: var(--color-primary-500);
   }
   &.is-black {
     --color-background-rbga: #{$color-neutral-900};
     --overlay-background: rgba(var(--color-background-rbga), 0.7);
-    --color-text: var(--color-white);
+    --color--text: var(--color-white);
     --color-background: var(--color-neutral-900);
   }
   &:hover .cursor {
@@ -494,7 +451,7 @@ body {
   .cursor {
     // pointer-events: none;
     &_dot {
-      // background-color: var(--color-text);
+      // background-color: var(--color--text);
       &.is-white {
         // background-color: var(--color-white);
       }
@@ -561,11 +518,11 @@ blockquote p {
     background-color: unset;
     // backdrop-filter: var(--background-blur);
     // padding: var(--header-padding-vertical) var(--header-padding-horizontal);
-    // color: var(--color-text);
-    // border-color: var(--color-text);
+    // color: var(--color--text);
+    // border-color: var(--color--text);
     &_header {}
     a {
-      // color: var(--color-text);
+      // color: var(--color--text);
     }
     &.is-open {
       // background-color: var(--color-black);
@@ -644,7 +601,7 @@ blockquote p {
       //   bottom: 0em;
       //   left: 0;
       //   height: 1px;
-      //   background-color: var(--color-text);
+      //   background-color: var(--color--text);
       //   transform: translate(-101%, 0%);
       //   transition: transform 300ms ease-out;
       // }
@@ -677,7 +634,7 @@ blockquote p {
       &.w--open,
       & * {
         background-color: unset;
-        color: var(--color-text)
+        color: var(--color--text)
       }
     }
   }
@@ -707,7 +664,7 @@ blockquote p {
 .footer {
   &_wrapper {
     @extend .transition;
-    background-color: var(--color-text);
+    background-color: var(--color--text);
     color: var(--color-background);
     border-top-left-radius: var(--border-radius-large);
     border-top-right-radius: var(--border-radius-large);
@@ -1014,7 +971,7 @@ blockquote p {
         //   left: 0;
         //   content: '';
         //   z-index: 2;
-        //   background-color: var(--color-text);
+        //   background-color: var(--color--text);
         // }
         @at-root body:not(.is-blue) & {
           filter: invert(1);
@@ -1202,7 +1159,7 @@ blockquote p {
 }
 .sticky-navigation {
   &_link {
-    color: var(--color-text);
+    color: var(--color--text);
     &:not(.w--current) {
       color: var(--color-primary-300);
       @extend .transition;
@@ -1226,7 +1183,7 @@ blockquote p {
     display: inline-flex;
 
   }
-  // color: var(--color-text);
+  // color: var(--color--text);
   &::before,
   &::after {
     // content: "";
@@ -1270,10 +1227,10 @@ blockquote p {
 
 .w-slider-dot {
   // background-color: unset;
-  // border: solid 2px var(--color-text);
+  // border: solid 2px var(--color--text);
   // margin: 0 0 0 0.5rem !important;
   &.w-active {
-    // background-color: var(--color-text);
+    // background-color: var(--color--text);
   }
 }
 .security {
