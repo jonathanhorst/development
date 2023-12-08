@@ -24,7 +24,7 @@ mmCompany1.add("(min-width: 768px)", () => {
       tl.to(
         triggerIcon, {
           rotate: 45,
-          color: "var(--color-white)",
+          color: "var(--color--generic--white)",
           duration: 0.3,
           ease: "power2.out",
         },

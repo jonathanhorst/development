@@ -42,62 +42,62 @@
   }
 }
 
-$color-black: 0,0,0;
-$color-white: 255,255,255;
-$color-neutral-50: 250,250,250;
-$color-neutral-100: 245,245,245;
-$color-neutral-200: 229,229,229;
-$color-neutral-300: 212,212,212;
-$color-neutral-400: 163,163,163;
-$color-neutral-500: 115,115,115;
-$color-neutral-600: 82,82,82;
-$color-neutral-700: 64,64,64;
-$color-neutral-800: 38,38,38;
-$color-neutral-900: 23,23,23;
-$color-primary-50: 231,239,255;
-$color-primary-100: 208,223,255;
-$color-primary-200: 161,191,255;
-$color-primary-300: 113,159,255;
-$color-primary-400: 66,127,255;
-$color-primary-500: 19,95,255;
-$color-primary-600: 0,74,228;
-$color-primary-700: 0,59,183;
-$color-primary-800: 0,44,137;
-$color-primary-900: 0,29,91;
+// $color-black: 0,0,0;
+// $color-white: 255,255,255;
+// $color-neutral-50: 250,250,250;
+// $color-neutral-100: 245,245,245;
+// $color-neutral-200: 229,229,229;
+// $color-neutral-300: 212,212,212;
+// $color-neutral-400: 163,163,163;
+// $color-neutral-500: 115,115,115;
+// $color-neutral-600: 82,82,82;
+// $color-neutral-700: 64,64,64;
+// $color-neutral-800: 38,38,38;
+// $color-neutral-900: 23,23,23;
+// $color-primary-50: 231,239,255;
+// $color-primary-100: 208,223,255;
+// $color-primary-200: 161,191,255;
+// $color-primary-300: 113,159,255;
+// $color-primary-400: 66,127,255;
+// $color-primary-500: 19,95,255;
+// $color-primary-600: 0,74,228;
+// $color-primary-700: 0,59,183;
+// $color-primary-800: 0,44,137;
+// $color-primary-900: 0,29,91;
 
 
 
 :root {
   // color-scheme: light dark;
-  --color-black: rgb(#{$color-black});
-  --color-white: rgb(#{$color-white});
-  --color-neutral-50: rgb(#{$color-neutral-50});
-  --color-neutral-100: rgb(#{$color-neutral-100});
-  --color-neutral-200: rgb(#{$color-neutral-200});
-  --color-neutral-300: rgb(#{$color-neutral-300});
-  --color-neutral-400: rgb(#{$color-neutral-400});
-  --color-neutral-500: rgb(#{$color-neutral-500});
-  --color-neutral-600: rgb(#{$color-neutral-600});
-  --color-neutral-700: rgb(#{$color-neutral-700});
-  --color-neutral-800: rgb(#{$color-neutral-800});
-  --color-neutral-900: rgb(#{$color-neutral-900});
-  --color-primary-50: rgb(#{$color-primary-50});
-  --color-primary-100: rgb(#{$color-primary-100});
-  --color-primary-200: rgb(#{$color-primary-200});
-  --color-primary-300: rgb(#{$color-primary-300});
-  --color-primary-400: rgb(#{$color-primary-400});
-  --color-primary-500: rgb(#{$color-primary-500});
-  --color-primary-600: rgb(#{$color-primary-600});
-  --color-primary-700: rgb(#{$color-primary-700});
-  --color-primary-800: rgb(#{$color-primary-800});
-  --color-primary-900: rgb(#{$color-primary-900});
+  // --color--generic--black: rgb(#{$color-black});
+  // --color--generic--white: rgb(#{$color-white});
+  // --color-neutral-50: rgb(#{$color-neutral-50});
+  // --color-neutral-100: rgb(#{$color-neutral-100});
+  // --color-neutral-200: rgb(#{$color-neutral-200});
+  // --color-neutral-300: rgb(#{$color-neutral-300});
+  // --color-neutral-400: rgb(#{$color-neutral-400});
+  // --color-neutral-500: rgb(#{$color-neutral-500});
+  // --color-neutral-600: rgb(#{$color-neutral-600});
+  // --color-neutral-700: rgb(#{$color-neutral-700});
+  // --color-neutral-800: rgb(#{$color-neutral-800});
+  // --color-neutral-900: rgb(#{$color-neutral-900});
+  // --color-primary-50: rgb(#{$color-primary-50});
+  // --color-primary-100: rgb(#{$color-primary-100});
+  // --color-primary-200: rgb(#{$color-primary-200});
+  // --color-primary-300: rgb(#{$color-primary-300});
+  // --color-primary-400: rgb(#{$color-primary-400});
+  // --color-primary-500: rgb(#{$color-primary-500});
+  // --color-primary-600: rgb(#{$color-primary-600});
+  // --color-primary-700: rgb(#{$color-primary-700});
+  // --color-primary-800: rgb(#{$color-primary-800});
+  // --color-primary-900: rgb(#{$color-primary-900});
   // --color--text: var(--color-primary-500);
-  --color-background: var(--color-white);
-  --color-background-rbga: #{$color-white};
+  // --color--background: var(--color--generic--white);
+  // --color--background-rbga: #{$color-white};
   --background-blur: blur(20px);
-  --overlay-background: rgba(var(--color-background-rbga), 0.5);
-  --container-padding: 2.5rem;
-  --border-radius-large: 3.5rem;
+  // --color--background-overlay: rgba(var(--color--background-rbga), 0.5);
+  // --padding--container: 2.5rem;
+  // --border--radius--large: 3.5rem;
   --button-shadow: 0px 0px 4px rgba(19, 95, 255, 0.1), 0px 0px 20px -5px rgba(19, 95, 255, 0.2);
 
   --header-logo-height: 1.25rem;
@@ -113,23 +113,22 @@ $color-primary-900: 0,29,91;
   @include breakpoint(delta) {}
   @include breakpoint(gamma) {
     --header-padding-vertical: 1.5rem;
-    --container-padding: 3.5rem;
+    --padding--container: 3.5rem;
   }
   @include breakpoint(beta) {}
   @include breakpoint(alpha) {}
   @include breakpoint(epsilon) {
-    --container-padding: 2rem;
+    --padding--container: 2rem;
     --header-padding-vertical: 1.25rem;
     --header-height: calc(var(--header-logo-height) + (var(--header-padding-vertical) * 2));
   }
   @include breakpoint(zeta) {
-    --container-padding: 1rem;
-    --border-radius-large: 2.5rem;
-
+    --padding--container: 1rem;
+    --border--radius--large: 2.5rem;
   }
   @include breakpoint(eta) {
     --header-padding-vertical: 1rem;
-    --border-radius-large: 2rem;
+    --border--radius--large: 2rem;
     --header-logo-height: 1rem;
   }
 }
@@ -149,7 +148,7 @@ HTML {
 }
 
 ::selection {
-  color: var(--color-background);
+  color: var(--color--background);
   background: var(--color--text);
 }
 
@@ -159,7 +158,7 @@ HTML {
     height: 4px;
   }
   &::-webkit-scrollbar-track {
-    background: var(--color-background);
+    background: var(--color--background);
   }
   &::-webkit-scrollbar-thumb {
     background: var(--color--text);
@@ -341,8 +340,8 @@ main:focus-visible {
   margin-left: 0rem !important;
 }
 .padding-global {
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
+  padding-left: var(--padding--container);
+  padding-right: var(--padding--container);
   &.bleed-right {
     padding-right: unset;
   }
@@ -428,22 +427,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  background-color: var(--color-background);
+  background-color: var(--color--background);
   @extend .transition;
   @extend .scrollbar;
   font-variation-settings: "wght"400;
   color: var(--color--text);
   &.is-blue {
-    --color-background-rbga: #{$color-primary-500};
-    --overlay-background: rgba(var(--color-background-rbga), 0.7);
-    --color--text: var(--color-white);
-    --color-background: var(--color-primary-500);
+    // --color--background-rbga: #{$color-primary-500};
+    --color--background-overlay: var(--color--primary--500-07a);
+    --color--text: var(--color--generic--white);
+    --color--background: var(--color--primary--500);
   }
   &.is-black {
-    --color-background-rbga: #{$color-neutral-900};
-    --overlay-background: rgba(var(--color-background-rbga), 0.7);
-    --color--text: var(--color-white);
-    --color-background: var(--color-neutral-900);
+    // --color--background-rbga: #{$color-neutral-900};
+    --color--background-overlay: var(--color--neutral--900-70a);
+    --color--text: var(--color--generic--white);
+    --color--background: var(--color--neutral--900);
   }
   &:hover .cursor {
     // opacity: 1.0;
@@ -453,7 +452,7 @@ body {
     &_dot {
       // background-color: var(--color--text);
       &.is-white {
-        // background-color: var(--color-white);
+        // background-color: var(--color--generic--white);
       }
       &.is-hover {
         // opacity: 0.5;
@@ -465,7 +464,7 @@ body {
 }
 
 .underline {
-  background-image: linear-gradient(to right, var(--color-primary-100) 100%, transparent 100%);
+  background-image: linear-gradient(to right, var(--color--primary--100) 100%, transparent 100%);
   background-position: 0 0.92em;
   background-repeat: repeat-x;
   background-size: 1px 8px;
@@ -510,10 +509,10 @@ blockquote p {
   &_component {
     // @extend .transition;
     // @media (hover: none) {
-    //   background-color: var(--color-background);
+    //   background-color: var(--color--background);
     // }
     // &:hover {
-    //   background-color: var(--color-background);
+    //   background-color: var(--color--background);
     // }
     background-color: unset;
     // backdrop-filter: var(--background-blur);
@@ -525,14 +524,14 @@ blockquote p {
       // color: var(--color--text);
     }
     &.is-open {
-      // background-color: var(--color-black);
-      // color: var(--color-white);
-      // border-color: var(--color-white);
+      // background-color: var(--color--generic--black);
+      // color: var(--color--generic--white);
+      // border-color: var(--color--generic--white);
       a {
-        // color: var(--color-white);
+        // color: var(--color--generic--white);
       }
       .nav-icon__line {
-        // border-color: var(--color-white);
+        // border-color: var(--color--generic--white);
       }
     }
     &.is-hidden {
@@ -542,7 +541,7 @@ blockquote p {
   &_inner {
     @extend .transition;
 
-    background-color: var(--overlay-background);
+    background-color: var(--color--background-overlay);
     backdrop-filter: var(--background-blur);
   }
   &_wrapper {
@@ -566,7 +565,7 @@ blockquote p {
       @include breakpoint(delta) {}
       @include breakpoint(epsilon) {
         padding-top: var(--header-height);
-        // background-color: var(--overlay-background);
+        // background-color: var(--color--background-overlay);
         // backdrop-filter: var(--background-blur);
       }
       @include breakpoint(zeta) {}
@@ -579,8 +578,8 @@ blockquote p {
       @include breakpoint(alpha) {}
       @include breakpoint(delta) {}
       @include breakpoint(epsilon) {
-        padding: var(--container-padding);
-        background-color: var(--overlay-background);
+        padding: var(--padding--container);
+        background-color: var(--color--background-overlay);
         backdrop-filter: var(--background-blur);
       }
       @include breakpoint(zeta) {}
@@ -588,7 +587,7 @@ blockquote p {
     &-link {
       &.is-button {
         @extend .transition;
-        background-color: rgba(var(--color-background), 0.3);
+        // background-color: rgba(var(--color--background), 0.3);
         box-shadow: var(--button-shadow);
       }
       // position: relative;
@@ -612,7 +611,7 @@ blockquote p {
     &_dropdown {
       &-list {
         @extend .transition;
-        background-color: var(--overlay-background);
+        background-color: var(--color--background-overlay);
         backdrop-filter: var(--background-blur);
         @include breakpoint(delta) {}
         @include breakpoint(gamma) {}
@@ -646,7 +645,7 @@ blockquote p {
 .modal-opt-in {
   &_component {
     @extend .transition;
-    background-color: var(--color-background);
+    background-color: var(--color--background);
   }
 }
 .email-opt-in {
@@ -665,9 +664,9 @@ blockquote p {
   &_wrapper {
     @extend .transition;
     background-color: var(--color--text);
-    color: var(--color-background);
-    border-top-left-radius: var(--border-radius-large);
-    border-top-right-radius: var(--border-radius-large);
+    color: var(--color--background);
+    border-top-left-radius: var(--border--radius--large);
+    border-top-right-radius: var(--border--radius--large);
   }
   &_nav {
     &_link {
@@ -739,14 +738,14 @@ blockquote p {
     @include breakpoint(epsilon) {}
     @include breakpoint(zeta) {}
     @include breakpoint(eta) {
-      margin: 0 calc(var(--container-padding) * -1);
-      width: calc(100% + var(--container-padding));
+      margin: 0 calc(var(--padding--container) * -1);
+      width: calc(100% + var(--padding--container));
     }
   }
 
   &-logos_marquee_overlay {
     @extend .transition;
-    background: linear-gradient(90deg, var(--color-background) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(90deg, var(--color--background) 0%, rgba(255, 255, 255, 0) 100%);
   }
   &-blockchain_marque {
     &_inner {
@@ -754,7 +753,7 @@ blockquote p {
     }
     &_pill-badge {
       @extend .transition;
-      background: var(--color-background);
+      background: var(--color--background);
     }
   }
   &-solutions_item {
@@ -770,12 +769,12 @@ blockquote p {
     }
   }
   &-quote-image_component {
-    border-radius: var(--border-radius-large);
+    border-radius: var(--border--radius--large);
   }
 }
 
 .technology-cryptography_quote_component {
-  color: var(--color-white);
+  color: var(--color--generic--white);
 }
 .company {
   &-investors {
@@ -932,7 +931,7 @@ blockquote p {
   }
 }
 [class^="section_"] {
-  background-color: var(--color-background);
+  background-color: var(--color--background);
   // transform: scale(1);
   position: relative;
   z-index: 2;
@@ -1045,7 +1044,7 @@ blockquote p {
   }
   &_home-quote-image {
     position: static;
-    color: var(--color-primary-500);
+    color: var(--color--primary--500);
 
   }
   &_technology-features {
@@ -1062,7 +1061,7 @@ blockquote p {
     position: sticky;
     top: var(--header-spacing);
     z-index: 3;
-    background-color: var(--overlay-background);
+    background-color: var(--color--background-overlay);
     backdrop-filter: var(--background-blur);
     @extend .transition;
   }
@@ -1073,9 +1072,9 @@ blockquote p {
     .component_contact-form_right-column {
       padding: 4%;
       @extend .transition;
-      background-color: var(--color-primary-100);
+      background-color: var(--color--primary--100);
       @at-root body.is-black & {
-        background-color: var(--color-neutral-800);
+        background-color: var(--color--neutral--800);
       }
     }
   }
@@ -1138,7 +1137,7 @@ blockquote p {
 
 .component {
   &_sticky-cta_component {
-    background-color: var(--overlay-background);
+    background-color: var(--color--background-overlay);
     backdrop-filter: var(--background-blur);
   }
   &_demo-form_component {
@@ -1148,7 +1147,7 @@ blockquote p {
     @include breakpoint(alpha) {}
     @include breakpoint(delta) {}
     @include breakpoint(epsilon) {
-      padding: var(--container-padding);
+      padding: var(--padding--container);
     }
     @include breakpoint(zeta) {}
     @include breakpoint(eta) {
@@ -1161,10 +1160,10 @@ blockquote p {
   &_link {
     color: var(--color--text);
     &:not(.w--current) {
-      color: var(--color-primary-300);
+      color: var(--color--primary--300);
       @extend .transition;
       @at-root body.is-black & {
-        color: var(--color-neutral-300);
+        color: var(--color--neutral--300);
       }
     }
   }
@@ -1175,7 +1174,7 @@ blockquote p {
 .button {
   &:not(.is-text) {
     @extend .transition;
-    background-color: var(--overlay-background);
+    background-color: var(--color--background-overlay);
     backdrop-filter: var(--background-blur);
     box-shadow: var(--button-shadow);
   }
@@ -1300,8 +1299,8 @@ blockquote p {
 // }
 
 .container-carousel {
-  // padding: calc(var(--header-height) + 1px) var(--container-padding) var(--container-padding) var(--container-padding);
-  padding: var(--container-padding);
+  // padding: calc(var(--header-height) + 1px) var(--padding--container) var(--padding--container) var(--padding--container);
+  padding: var(--padding--container);
   @include breakpoint(delta) {}
   @include breakpoint(gamma) {
     padding-bottom: var(--header-height);
@@ -1383,17 +1382,17 @@ blockquote p {
   &_column {
     &.is-emphasized {
       @extend .transition;
-      background-color: var(--color-primary-100);
+      background-color: var(--color--primary--100);
       @at-root {
         .is-black & {
-          background-color: var(--color-neutral-800);
+          background-color: var(--color--neutral--800);
         }
       }
     }
     &.is-first {
       .comp-table_field {
         @extend .transition;
-        background-color: var(--color-background);
+        background-color: var(--color--background);
       }
       .comp-table_field:first-child {
         border-right: 0;
@@ -1427,17 +1426,17 @@ blockquote p {
     &-shadow {
       opacity: 0;
       transition: opacity 0.1s ease-out;
-      background-image: linear-gradient(to right, var(--color-background), rgba(0, 0, 0, 0));
+      background-image: linear-gradient(to right, var(--color--background), rgba(0, 0, 0, 0));
       &.is-visible {
         opacity: 1;
       }
     }
   }
   &_field {
-    border-color: var(--color-primary-200);
+    border-color: var(--color--primary--200);
     @at-root {
       .is-black & {
-        border-color: var(--color-neutral-500);
+        border-color: var(--color--neutral--500);
         img {
           filter: saturate(0.0) invert(1);
         }

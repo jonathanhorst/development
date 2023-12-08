@@ -12,8 +12,8 @@ $(document).ready(function() {
         const $quoteComponent = $("[th-element='technology-quote-component']");
 
         const rootStyles = getComputedStyle(document.documentElement);
-        const paddingValue = rootStyles.getPropertyValue('--container-padding').trim();
-        const borderRadiusValue = rootStyles.getPropertyValue('--border-radius-large').trim();
+        const paddingValue = rootStyles.getPropertyValue('--padding--container').trim();
+        const borderRadiusValue = rootStyles.getPropertyValue('--border--radius--large').trim();
 
         // Create the animation
         const tl = gsap.timeline({
