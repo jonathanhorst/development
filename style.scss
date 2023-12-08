@@ -277,8 +277,7 @@ blockquote,
   border-color: inherit;
 }
 
-.w-embed:before,
-.w-embed:after {
+.w-embed:before, .w-embed:after, .w-tabs:before, .w-tabs:after {
   display: none;
 }
 
@@ -977,7 +976,6 @@ blockquote p {
 }
 [class^="section_"] {
   background-color: var(--color-background);
-  // background-color: white;
   // transform: scale(1);
   position: relative;
   z-index: 2;
@@ -992,6 +990,10 @@ blockquote p {
     position: static;
   }
   @include breakpoint(eta) {}
+}
+[class*="section"] {
+  @extend .transition;
+
 }
 .section {
   &_hero-image {
@@ -1274,9 +1276,15 @@ blockquote p {
     // background-color: var(--color-text);
   }
 }
-
+.security {
+  &_hero{
+    &_heading {
+      font-size: min(9.3vw, 11.4rem);
+    }
+  }
+}
 .quote_quote:before {
-  // content: "“";
+  // content: "";
   // display: block;
   // position: absolute;
   // left: -0.5em;
