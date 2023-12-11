@@ -43,7 +43,8 @@
 
 body {
   opacity: 0;
-  transition: opacity 100ms ease-out
+  font-variation-settings: "wght" 400;
+  transition: opacity 100ms ease-out;
 }
 
 * {

@@ -371,7 +371,7 @@ $(document).ready(() => {
   let scrollTop = 0;
 
   const headerSpacingElements = $(".section_sticky-navigation");
-  const headerSpacingValue = getComputedStyle(document.documentElement).getPropertyValue('--header-spacing').trim();
+  const headerSpacingValue = getComputedStyle(document.documentElement).getPropertyValue('--header--spacing').trim();
 
   gsap.set(headerSpacingElements, { top: headerSpacingValue });
 

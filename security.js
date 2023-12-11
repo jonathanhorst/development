@@ -1,7 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
     const hoverTabElements = document.querySelectorAll('[th-tab-onhover="click"]');
     let autoProgressInterval;
-    const tabChangeInterval = 2000; // Interval in milliseconds
+    const tabChangeInterval = 2500; // Interval in milliseconds for automatic tab change
+    const postClickInterval = 6000; // Interval in milliseconds after a tab is clicked
+
+    // Safari Scroll Fix
+    if (navigator.userAgent.includes("Safari")) {
+        hoverTabElements.forEach(tabLink => {
+            tabLink.focus = function() {
+                const x = window.scrollX, y = window.scrollY;
+                const f = () => {
+                    setTimeout(() => window.scrollTo(x, y), 1);
+                    tabLink.removeEventListener("focus", f);
+                };
+                tabLink.addEventListener("focus", f);
+                HTMLElement.prototype.focus.apply(this, arguments);
+            };
+        });
+    }
 
     function switchToNextTab() {
         // Find the currently active tab
@@ -19,19 +35,19 @@ document.addEventListener('DOMContentLoaded', function() {
     hoverTabElements.forEach(hoverTabElement => {
         hoverTabElement.addEventListener('mouseenter', function() {
             hoverTabElement.click(); // Click on the element when hovering
-            resetAutoProgress(); // Reset the auto-progress when a tab is manually hovered
+            resetAutoProgress(postClickInterval); // Reset the auto-progress with a longer delay after a click
         });
     });
 
-    function startAutoProgress() {
+    function startAutoProgress(delay = tabChangeInterval) {
         // Clear any existing interval to avoid duplicates
         clearInterval(autoProgressInterval);
-        autoProgressInterval = setInterval(switchToNextTab, tabChangeInterval);
+        autoProgressInterval = setInterval(switchToNextTab, delay);
     }
 
-    function resetAutoProgress() {
+    function resetAutoProgress(delay = tabChangeInterval) {
         clearInterval(autoProgressInterval);
-        startAutoProgress();
+        startAutoProgress(delay);
     }
 
     // Start the auto-progress initially

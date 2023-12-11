@@ -100,11 +100,13 @@
   // --border--radius--large: 3.5rem;
   --button-shadow: 0px 0px 4px rgba(19, 95, 255, 0.1), 0px 0px 20px -5px rgba(19, 95, 255, 0.2);
 
-  --header-logo-height: 1.25rem;
-  --header-padding-vertical: 1rem;
-  --header-navbar-top-height: 0.5rem + (1rem * 1.4);
-  --header-height: calc(var(--header-logo-height) + 0.75rem + (var(--header-padding-vertical) * 2));
-  --header-spacing: var(--header-height);
+
+
+  // --header--logo-height: 1.25rem;
+  // --header--padding-vertical: 1rem;
+  // --header-navbar-top-height: 0.5rem + (1rem * 1.4);
+  --header--height: calc(var(--header--logo-height) + 0.75rem + (var(--header--padding-vertical) * 2));
+  // --header--spacing: var(--header--height);
 
   --transition-property: color, background-color, background, border, filter, opacity;
   --transition-duration: 500ms, 600ms, 600ms, 600ms, 100ms;
@@ -112,24 +114,24 @@
 
   @include breakpoint(delta) {}
   @include breakpoint(gamma) {
-    --header-padding-vertical: 1.5rem;
+    --header--padding-vertical: 1.5rem;
     --padding--container: 3.5rem;
   }
   @include breakpoint(beta) {}
   @include breakpoint(alpha) {}
   @include breakpoint(epsilon) {
     --padding--container: 2rem;
-    --header-padding-vertical: 1.25rem;
-    --header-height: calc(var(--header-logo-height) + (var(--header-padding-vertical) * 2));
+    --header--padding-vertical: 1.25rem;
+    --header--height: calc(var(--header--logo-height) + (var(--header--padding-vertical) * 2));
   }
   @include breakpoint(zeta) {
     --padding--container: 1rem;
     --border--radius--large: 2.5rem;
   }
   @include breakpoint(eta) {
-    --header-padding-vertical: 1rem;
+    --header--padding-vertical: 1rem;
     --border--radius--large: 2rem;
-    --header-logo-height: 1rem;
+    --header--logo-height: 1rem;
   }
 }
 
@@ -417,7 +419,7 @@ main:focus-visible {
 }
 
 .is-sticky {
-  // top: var(--header-height);
+  // top: var(--header--height);
 }
 
 
@@ -430,7 +432,7 @@ body {
   background-color: var(--color--background);
   @extend .transition;
   @extend .scrollbar;
-  font-variation-settings: "wght"400;
+  font-variation-settings: 'wght' 400;
   color: var(--color--text);
   &.is-blue {
     // --color--background-rbga: #{$color-primary-500};
@@ -516,7 +518,7 @@ blockquote p {
     // }
     background-color: unset;
     // backdrop-filter: var(--background-blur);
-    // padding: var(--header-padding-vertical) var(--header-padding-horizontal);
+    // padding: var(--header--padding-vertical) var(--header-padding-horizontal);
     // color: var(--color--text);
     // border-color: var(--color--text);
     &_header {}
@@ -545,15 +547,15 @@ blockquote p {
     backdrop-filter: var(--background-blur);
   }
   &_wrapper {
-    padding-top: var(--header-padding-vertical);
-    padding-bottom: var(--header-padding-vertical);
+    padding-top: var(--header--padding-vertical);
+    padding-bottom: var(--header--padding-vertical);
 
   }
   &_logo-link {
     // color: inherit;
   }
   &_logo-embed {
-    height: var(--header-logo-height);
+    height: var(--header--logo-height);
   }
   &_menu {
     &-component {
@@ -564,7 +566,7 @@ blockquote p {
       @include breakpoint(alpha) {}
       @include breakpoint(delta) {}
       @include breakpoint(epsilon) {
-        padding-top: var(--header-height);
+        padding-top: var(--header--height);
         // background-color: var(--color--background-overlay);
         // backdrop-filter: var(--background-blur);
       }
@@ -663,10 +665,10 @@ blockquote p {
 .footer {
   &_wrapper {
     @extend .transition;
-    background-color: var(--color--text);
-    color: var(--color--background);
-    border-top-left-radius: var(--border--radius--large);
-    border-top-right-radius: var(--border--radius--large);
+    // background-color: var(--color--text);
+    // color: var(--color--background);
+    // border-top-left-radius: var(--border--radius--large);
+    // border-top-right-radius: var(--border--radius--large);
   }
   &_nav {
     &_link {
@@ -769,7 +771,7 @@ blockquote p {
     }
   }
   &-quote-image_component {
-    border-radius: var(--border--radius--large);
+    // border-radius: var(--border--radius--large);
   }
 }
 
@@ -825,7 +827,7 @@ blockquote p {
 .blog-post {
   &_content {
     &_right-column {
-      top: var(--header-height);
+      top: var(--header--height);
     }
   }
 }
@@ -1059,7 +1061,7 @@ blockquote p {
   }
   &_sticky-navigation {
     position: sticky;
-    top: var(--header-spacing);
+    top: var(--header--spacing);
     z-index: 3;
     background-color: var(--color--background-overlay);
     backdrop-filter: var(--background-blur);
@@ -1299,11 +1301,11 @@ blockquote p {
 // }
 
 .container-carousel {
-  // padding: calc(var(--header-height) + 1px) var(--padding--container) var(--padding--container) var(--padding--container);
+  // padding: calc(var(--header--height) + 1px) var(--padding--container) var(--padding--container) var(--padding--container);
   padding: var(--padding--container);
   @include breakpoint(delta) {}
   @include breakpoint(gamma) {
-    padding-bottom: var(--header-height);
+    padding-bottom: var(--header--height);
   }
   @include breakpoint(beta) {}
   @include breakpoint(alpha) {}
