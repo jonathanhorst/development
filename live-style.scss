@@ -41,6 +41,16 @@
   }
 }
 
+HTML {
+  font-size: 16px;
+  font-variant-ligatures: common-ligatures;
+}
+
+::selection {
+  color: var(--color--background);
+  background: var(--color--text);
+}
+
 body {
   opacity: 0;
   font-variation-settings: "wght" 400;
@@ -51,6 +61,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+input[type="file"]:focus-visible {
+  outline: 0.125rem solid #4d65ff;
+  outline-offset: 0.125rem;
+}
+
+main:focus-visible {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
 .is-invisible {
   position: absolute !important;
   height: 1px;
@@ -58,34 +80,52 @@ body {
   overflow: hidden;
   clip: rect(1px 1px 1px 1px);
 }
+
 input,
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   border-radius: 0;
 }
+
 .modal-opt-in_component {
   display: none;
 }
+
 [th-member="bio"] {
-  @include breakpoint(delta) {}
-  @include breakpoint(gamma) {}
-  @include breakpoint(beta) {}
-  @include breakpoint(alpha) {}
-  @include breakpoint(delta) {}
-  @include breakpoint(epsilon) {}
-  @include breakpoint(zeta) {}
-  @include breakpoint(eta) {}
-  &.is-active {}
+  @include breakpoint(delta) {
+  }
+  @include breakpoint(gamma) {
+  }
+  @include breakpoint(beta) {
+  }
+  @include breakpoint(alpha) {
+  }
+  @include breakpoint(delta) {
+  }
+  @include breakpoint(epsilon) {
+  }
+  @include breakpoint(zeta) {
+  }
+  @include breakpoint(eta) {
+  }
+  &.is-active {
+  }
 }
 [th-member="trigger-icon"].is-active {
-  @include breakpoint(delta) {}
-  @include breakpoint(gamma) {}
-  @include breakpoint(beta) {}
-  @include breakpoint(alpha) {}
-  @include breakpoint(delta) {}
-  @include breakpoint(epsilon) {}
-  @include breakpoint(zeta) {}
-  @include breakpoint(eta) {}
+  @include breakpoint(delta) {
+  }
+  @include breakpoint(gamma) {
+  }
+  @include breakpoint(beta) {
+  }
+  @include breakpoint(alpha) {
+  }
+  @include breakpoint(delta) {
+  }
+  @include breakpoint(epsilon) {
+  }
+  @include breakpoint(zeta) {
+  }
+  @include breakpoint(eta) {
+  }
 }
