@@ -4,37 +4,37 @@
       @content;
     }
   }
-  @if $point==delta {
+  @if $point==desktopSmall {
     @media (min-width: 1280px) {
       @content;
     }
   }
-  @if $point==gamma {
+  @if $point==desktopMedium {
     @media (min-width: 1320px) {
       @content;
     }
   }
-  @if $point==beta {
+  @if $point==desktopLarge {
     @media (min-width: 1440px) {
       @content;
     }
   }
-  @if $point==alpha {
+  @if $point==desktopXLarge {
     @media (min-width: 1920px) {
       @content;
     }
   }
-  @if $point==epsilon {
+  @if $point==tablet {
     @media (max-width: 991px) {
       @content;
     }
   }
-  @if $point==zeta {
+  @if $point==mobileLandscape {
     @media (max-width: 767px) {
       @content;
     }
   }
-  @if $point==eta {
+  @if $point==mobile {
     @media (max-width: 479px) {
       @content;
     }
@@ -92,40 +92,40 @@ textarea {
 }
 
 [th-member="bio"] {
-  @include breakpoint(delta) {
+  @include breakpoint(desktopSmall) {
   }
-  @include breakpoint(gamma) {
+  @include breakpoint(desktopMedium) {
   }
-  @include breakpoint(beta) {
+  @include breakpoint(desktopLarge) {
   }
-  @include breakpoint(alpha) {
+  @include breakpoint(desktopXLarge) {
   }
-  @include breakpoint(delta) {
+  @include breakpoint(desktopSmall) {
   }
-  @include breakpoint(epsilon) {
+  @include breakpoint(tablet) {
   }
-  @include breakpoint(zeta) {
+  @include breakpoint(mobileLandscape) {
   }
-  @include breakpoint(eta) {
+  @include breakpoint(mobile) {
   }
   &.is-active {
   }
 }
 [th-member="trigger-icon"].is-active {
-  @include breakpoint(delta) {
+  @include breakpoint(desktopSmall) {
   }
-  @include breakpoint(gamma) {
+  @include breakpoint(desktopMedium) {
   }
-  @include breakpoint(beta) {
+  @include breakpoint(desktopLarge) {
   }
-  @include breakpoint(alpha) {
+  @include breakpoint(desktopXLarge) {
   }
-  @include breakpoint(delta) {
+  @include breakpoint(desktopSmall) {
   }
-  @include breakpoint(epsilon) {
+  @include breakpoint(tablet) {
   }
-  @include breakpoint(zeta) {
+  @include breakpoint(mobileLandscape) {
   }
-  @include breakpoint(eta) {
+  @include breakpoint(mobile) {
   }
 }

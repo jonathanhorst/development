@@ -6,134 +6,70 @@
     }
   }
 
-  @if $point==delta {
+  @if $point==desktopSmall {
     @media (min-width: 1280px) {
       @content;
     }
   }
 
-  @if $point==gamma {
+  @if $point==desktopMedium {
     @media (min-width: 1320px) {
       @content;
     }
   }
 
-  @if $point==beta {
+  @if $point==desktopLarge {
     @media (min-width: 1440px) {
       @content;
     }
   }
 
-  @if $point==alpha {
+  @if $point==desktopXLarge {
     @media (min-width: 1920px) {
       @content;
     }
   }
 
-  @if $point==epsilon {
+  @if $point==tablet {
     @media (max-width: 991px) {
       @content;
     }
   }
 
-  @if $point==zeta {
+  @if $point==mobileLandscape {
     @media (max-width: 767px) {
       @content;
     }
   }
 
-  @if $point==eta {
+  @if $point==mobile {
     @media (max-width: 479px) {
       @content;
     }
   }
 }
 
-// $color-black: 0,0,0;
-// $color-white: 255,255,255;
-// $color-neutral-50: 250,250,250;
-// $color-neutral-100: 245,245,245;
-// $color-neutral-200: 229,229,229;
-// $color-neutral-300: 212,212,212;
-// $color-neutral-400: 163,163,163;
-// $color-neutral-500: 115,115,115;
-// $color-neutral-600: 82,82,82;
-// $color-neutral-700: 64,64,64;
-// $color-neutral-800: 38,38,38;
-// $color-neutral-900: 23,23,23;
-// $color-primary-50: 231,239,255;
-// $color-primary-100: 208,223,255;
-// $color-primary-200: 161,191,255;
-// $color-primary-300: 113,159,255;
-// $color-primary-400: 66,127,255;
-// $color-primary-500: 19,95,255;
-// $color-primary-600: 0,74,228;
-// $color-primary-700: 0,59,183;
-// $color-primary-800: 0,44,137;
-// $color-primary-900: 0,29,91;
-
 :root {
-  // color-scheme: light dark;
-  // --color--generic--black: rgb(#{$color-black});
-  // --color--generic--white: rgb(#{$color-white});
-  // --color-neutral-50: rgb(#{$color-neutral-50});
-  // --color-neutral-100: rgb(#{$color-neutral-100});
-  // --color-neutral-200: rgb(#{$color-neutral-200});
-  // --color-neutral-300: rgb(#{$color-neutral-300});
-  // --color-neutral-400: rgb(#{$color-neutral-400});
-  // --color-neutral-500: rgb(#{$color-neutral-500});
-  // --color-neutral-600: rgb(#{$color-neutral-600});
-  // --color-neutral-700: rgb(#{$color-neutral-700});
-  // --color-neutral-800: rgb(#{$color-neutral-800});
-  // --color-neutral-900: rgb(#{$color-neutral-900});
-  // --color-primary-50: rgb(#{$color-primary-50});
-  // --color-primary-100: rgb(#{$color-primary-100});
-  // --color-primary-200: rgb(#{$color-primary-200});
-  // --color-primary-300: rgb(#{$color-primary-300});
-  // --color-primary-400: rgb(#{$color-primary-400});
-  // --color-primary-500: rgb(#{$color-primary-500});
-  // --color-primary-600: rgb(#{$color-primary-600});
-  // --color-primary-700: rgb(#{$color-primary-700});
-  // --color-primary-800: rgb(#{$color-primary-800});
-  // --color-primary-900: rgb(#{$color-primary-900});
-  // --color--text: var(--color-primary-500);
-  // --color--background: var(--color--generic--white);
-  // --color--background-rbga: #{$color-white};
   --background-blur: blur(20px);
-  // --color--background-overlay: rgba(var(--color--background-rbga), 0.5);
-  // --padding--container: 2.5rem;
-  // --border--radius--large: 3.5rem;
   --button-shadow: 0px 0px 4px rgba(19, 95, 255, 0.1),
     0px 0px 20px -5px rgba(19, 95, 255, 0.2);
-
-  // --header--logo-height: 1.25rem;
-  // --header--padding-vertical: 1rem;
-  // --header-navbar-top-height: 0.5rem + (1rem * 1.4);
   --header--height: calc(
     var(--header--logo-height) + 0.75rem + (var(--header--padding-vertical) * 2)
   );
-  // --header--spacing: var(--header--height);
-
   --transition-property: color, background-color, background, border, filter,
     opacity;
   --transition-duration: 500ms, 600ms, 600ms, 600ms, 100ms;
   --transition-timing: ease-out, ease-out, ease-out, ease-out, ease-out;
+  --color--currentcolor: currentColor;
+  --color--inherit: inherit;
+  --color--unset: unset;
 
-  @include breakpoint(delta) {
-  }
-
-  @include breakpoint(gamma) {
+  @include breakpoint(desktopMedium) {
     --header--padding-vertical: 1.5rem;
     --padding--container: 3.5rem;
   }
 
-  @include breakpoint(beta) {
-  }
-
-  @include breakpoint(alpha) {
-  }
-
-  @include breakpoint(epsilon) {
+  @include breakpoint(tablet) {
     --padding--container: 2rem;
     --header--padding-vertical: 1.25rem;
     --header--height: calc(
@@ -141,43 +77,16 @@
     );
   }
 
-  @include breakpoint(zeta) {
+  @include breakpoint(mobileLandscape) {
     --padding--container: 1rem;
     --border--radius--large: 2.5rem;
   }
 
-  @include breakpoint(eta) {
+  @include breakpoint(mobile) {
     --header--padding-vertical: 1rem;
     --border--radius--large: 2rem;
     --header--logo-height: 1rem;
   }
-}
-
-@include breakpoint(delta) {
-}
-
-@include breakpoint(gamma) {
-}
-
-@include breakpoint(beta) {
-}
-
-@include breakpoint(alpha) {
-}
-
-@include breakpoint(delta) {
-}
-
-@include breakpoint(epsilon) {
-}
-
-@include breakpoint(zeta) {
-}
-
-@include breakpoint(eta) {
-}
-
-HTML {
 }
 
 .scrollbar {
@@ -234,20 +143,6 @@ a,
   @extend .transition;
 }
 
-// a,
-// .link-block,
-// .w-nav-link,
-// .w-dropdown-btn,
-// .w-dropdown-link,
-// .w-dropdown-toggle,
-// .w-nav-brand,
-// .w-input,
-// .w-select,
-// .w-input::-webkit-input-placeholder,
-// .w-select::-webkit-input-placeholder {
-// color: var(--color--text);
-// }
-
 blockquote,
 .w-input,
 .w-select,
@@ -268,20 +163,6 @@ blockquote,
 .w-pagination-previous {
   color: inherit;
 }
-
-// .clickable-off {
-//   pointer-events: none;
-// }
-
-// .clickable-on {
-//   pointer-events: auto;
-// }
-
-// .div-square::after {
-//   content: "";
-//   display: block;
-//   padding-bottom: 100%;
-// }
 
 // Define a mixin for common styles
 @mixin common-styles {
@@ -489,57 +370,57 @@ blockquote p {
 .heading {
   &-style {
     &-h1 {
-      @include breakpoint(delta) {
+      @include breakpoint(desktopSmall) {
         font-size: max(10vh, 5.5rem);
       }
 
-      @include breakpoint(gamma) {
+      @include breakpoint(desktopMedium) {
       }
 
-      @include breakpoint(beta) {
+      @include breakpoint(desktopLarge) {
       }
 
-      @include breakpoint(alpha) {
+      @include breakpoint(desktopXLarge) {
       }
 
-      @include breakpoint(delta) {
+      @include breakpoint(desktopSmall) {
       }
 
-      @include breakpoint(epsilon) {
+      @include breakpoint(tablet) {
       }
 
-      @include breakpoint(zeta) {
+      @include breakpoint(mobileLandscape) {
       }
 
-      @include breakpoint(eta) {
+      @include breakpoint(mobile) {
       }
     }
 
     &-h2 {
-      @include breakpoint(delta) {
+      @include breakpoint(desktopSmall) {
         font-size: max(8vmin, 5rem);
       }
 
-      @include breakpoint(gamma) {
+      @include breakpoint(desktopMedium) {
       }
 
-      @include breakpoint(beta) {
+      @include breakpoint(desktopLarge) {
       }
 
-      @include breakpoint(alpha) {
+      @include breakpoint(desktopXLarge) {
         font-size: 7rem;
       }
 
-      @include breakpoint(delta) {
+      @include breakpoint(desktopSmall) {
       }
 
-      @include breakpoint(epsilon) {
+      @include breakpoint(tablet) {
       }
 
-      @include breakpoint(zeta) {
+      @include breakpoint(mobileLandscape) {
       }
 
-      @include breakpoint(eta) {
+      @include breakpoint(mobile) {
       }
     }
   }
@@ -606,44 +487,44 @@ blockquote p {
 
   &_menu {
     &-component {
-    //   pointer-events: none;
-      @include breakpoint(delta) {
+      //   pointer-events: none;
+      @include breakpoint(desktopSmall) {
       }
-      @include breakpoint(gamma) {
+      @include breakpoint(desktopMedium) {
       }
-      @include breakpoint(beta) {
+      @include breakpoint(desktopLarge) {
       }
-      @include breakpoint(alpha) {
+      @include breakpoint(desktopXLarge) {
       }
-      @include breakpoint(delta) {
+      @include breakpoint(desktopSmall) {
       }
-      @include breakpoint(epsilon) {
+      @include breakpoint(tablet) {
         padding-top: var(--header--height);
         // background-color: var(--color--background-overlay);
         // backdrop-filter: var(--background-blur);
       }
-      @include breakpoint(zeta) {
+      @include breakpoint(mobileLandscape) {
       }
     }
 
     &-wrapper {
-    //   pointer-events: auto;
-      @include breakpoint(delta) {
+      //   pointer-events: auto;
+      @include breakpoint(desktopSmall) {
       }
-      @include breakpoint(gamma) {
+      @include breakpoint(desktopMedium) {
       }
-      @include breakpoint(beta) {
+      @include breakpoint(desktopLarge) {
       }
-      @include breakpoint(alpha) {
+      @include breakpoint(desktopXLarge) {
       }
-      @include breakpoint(delta) {
+      @include breakpoint(desktopSmall) {
       }
-      @include breakpoint(epsilon) {
+      @include breakpoint(tablet) {
         padding: var(--padding--container);
         background-color: var(--color--background-overlay);
         backdrop-filter: var(--background-blur);
       }
-      @include breakpoint(zeta) {
+      @include breakpoint(mobileLandscape) {
       }
     }
 
@@ -678,21 +559,21 @@ blockquote p {
         @extend .transition;
         // background-color: var(--color--background-overlay);
         backdrop-filter: var(--background-blur);
-        @include breakpoint(delta) {
+        @include breakpoint(desktopSmall) {
         }
-        @include breakpoint(gamma) {
+        @include breakpoint(desktopMedium) {
         }
-        @include breakpoint(beta) {
+        @include breakpoint(desktopLarge) {
         }
-        @include breakpoint(alpha) {
+        @include breakpoint(desktopXLarge) {
         }
-        @include breakpoint(delta) {
+        @include breakpoint(desktopSmall) {
         }
-        @include breakpoint(epsilon) {
+        @include breakpoint(tablet) {
           background-color: unset;
           backdrop-filter: unset;
         }
-        @include breakpoint(zeta) {
+        @include breakpoint(mobileLandscape) {
         }
         &.w-dropdown-list.w--open {
           display: flex;
@@ -772,24 +653,24 @@ blockquote p {
     min-height: 100vh;
     min-height: 100dvh;
 
-    @include breakpoint(delta) {
+    @include breakpoint(desktopSmall) {
     }
-    @include breakpoint(gamma) {
+    @include breakpoint(desktopMedium) {
     }
-    @include breakpoint(beta) {
+    @include breakpoint(desktopLarge) {
     }
-    @include breakpoint(alpha) {
+    @include breakpoint(desktopXLarge) {
     }
-    @include breakpoint(delta) {
-    }
-
-    @include breakpoint(epsilon) {
+    @include breakpoint(desktopSmall) {
     }
 
-    @include breakpoint(zeta) {
+    @include breakpoint(tablet) {
     }
 
-    @include breakpoint(eta) {
+    @include breakpoint(mobileLandscape) {
+    }
+
+    @include breakpoint(mobile) {
       min-height: unset;
     }
   }
@@ -810,56 +691,35 @@ blockquote p {
   }
 
   &_content {
-    @include breakpoint(delta) {
+    @include breakpoint(desktopSmall) {
     }
   }
 
-  @include breakpoint(delta) {
+  @include breakpoint(desktopSmall) {
   }
 
-  @include breakpoint(gamma) {
+  @include breakpoint(desktopMedium) {
   }
 
-  @include breakpoint(beta) {
+  @include breakpoint(desktopLarge) {
   }
 
-  @include breakpoint(alpha) {
+  @include breakpoint(desktopXLarge) {
   }
 
-  @include breakpoint(delta) {
+  @include breakpoint(desktopSmall) {
   }
 
-  @include breakpoint(epsilon) {
+  @include breakpoint(tablet) {
   }
 
-  @include breakpoint(zeta) {
+  @include breakpoint(mobileLandscape) {
   }
 }
 
 .home {
   &-logos_marquee_inner {
-    @include breakpoint(delta) {
-    }
-
-    @include breakpoint(gamma) {
-    }
-
-    @include breakpoint(beta) {
-    }
-
-    @include breakpoint(alpha) {
-    }
-
-    @include breakpoint(delta) {
-    }
-
-    @include breakpoint(epsilon) {
-    }
-
-    @include breakpoint(zeta) {
-    }
-
-    @include breakpoint(eta) {
+    @include breakpoint(mobile) {
       margin: 0 calc(var(--padding--container) * -1);
       width: calc(100% + var(--padding--container));
     }
@@ -888,10 +748,6 @@ blockquote p {
       }
     }
   }
-
-  &-quote-image_component {
-    // border-radius: var(--border--radius--large);
-  }
 }
 
 .blockchains-supported_marque {
@@ -906,29 +762,29 @@ blockquote p {
 }
 
 .technology-cryptography_quote_component {
-//   color: var(--color--generic--white);
+  //   color: var(--color--generic--white);
 }
 
 .company {
   &-investors {
     &_investor {
       &-bottom {
-        @include breakpoint(delta) {
+        @include breakpoint(desktopSmall) {
         }
 
-        @include breakpoint(gamma) {
+        @include breakpoint(desktopMedium) {
         }
 
-        @include breakpoint(beta) {
+        @include breakpoint(desktopLarge) {
         }
 
-        @include breakpoint(alpha) {
+        @include breakpoint(desktopXLarge) {
         }
 
-        @include breakpoint(delta) {
+        @include breakpoint(desktopSmall) {
         }
 
-        @include breakpoint(epsilon) {
+        @include breakpoint(tablet) {
           // padding: 2rem;
           // &:nth-child(2n-1) {
           //   padding-left: 0;
@@ -952,10 +808,10 @@ blockquote p {
           }
         }
 
-        @include breakpoint(zeta) {
+        @include breakpoint(mobileLandscape) {
         }
 
-        @include breakpoint(eta) {
+        @include breakpoint(mobile) {
           &:nth-child(odd) {
             border-right: solid 1px;
           }
@@ -988,7 +844,7 @@ blockquote p {
     padding-top: 1.25rem;
     grid-row-gap: 3.5rem;
 
-    @include breakpoint(eta) {
+    @include breakpoint(mobile) {
       padding-top: 1rem;
       grid-row-gap: 1.5rem;
     }
@@ -1016,26 +872,26 @@ blockquote p {
       width: 8rem;
       max-width: 50%;
 
-      @include breakpoint(delta) {
+      @include breakpoint(desktopSmall) {
       }
 
-      @include breakpoint(gamma) {
+      @include breakpoint(desktopMedium) {
       }
 
-      @include breakpoint(beta) {
+      @include breakpoint(desktopLarge) {
       }
 
-      @include breakpoint(alpha) {
+      @include breakpoint(desktopXLarge) {
       }
 
-      @include breakpoint(delta) {
+      @include breakpoint(desktopSmall) {
       }
 
-      @include breakpoint(epsilon) {
+      @include breakpoint(tablet) {
         width: 6rem;
       }
 
-      @include breakpoint(zeta) {
+      @include breakpoint(mobileLandscape) {
       }
     }
   }
@@ -1047,30 +903,30 @@ blockquote p {
     align-items: center;
     gap: 2.5rem;
 
-    @include breakpoint(delta) {
+    @include breakpoint(desktopSmall) {
     }
 
-    @include breakpoint(gamma) {
+    @include breakpoint(desktopMedium) {
     }
 
-    @include breakpoint(beta) {
+    @include breakpoint(desktopLarge) {
     }
 
-    @include breakpoint(alpha) {
+    @include breakpoint(desktopXLarge) {
     }
 
-    @include breakpoint(delta) {
+    @include breakpoint(desktopSmall) {
     }
 
-    @include breakpoint(epsilon) {
+    @include breakpoint(tablet) {
       gap: 1.5rem;
       padding: 1.5rem 0;
     }
 
-    @include breakpoint(zeta) {
+    @include breakpoint(mobileLandscape) {
     }
 
-    @include breakpoint(eta) {
+    @include breakpoint(mobile) {
       flex-direction: column;
       align-items: flex-start;
       grid-row-gap: 2rem;
@@ -1133,29 +989,29 @@ blockquote p {
   z-index: 2;
   @extend .transition;
 
-  @include breakpoint(delta) {
+  @include breakpoint(desktopSmall) {
   }
 
-  @include breakpoint(gamma) {
+  @include breakpoint(desktopMedium) {
   }
 
-  @include breakpoint(beta) {
+  @include breakpoint(desktopLarge) {
   }
 
-  @include breakpoint(alpha) {
+  @include breakpoint(desktopXLarge) {
   }
 
-  @include breakpoint(delta) {
+  @include breakpoint(desktopSmall) {
   }
 
-  @include breakpoint(epsilon) {
+  @include breakpoint(tablet) {
   }
 
-  @include breakpoint(zeta) {
+  @include breakpoint(mobileLandscape) {
     position: static;
   }
 
-  @include breakpoint(eta) {
+  @include breakpoint(mobile) {
   }
 }
 
@@ -1207,22 +1063,22 @@ blockquote p {
         border-left: 1px solid;
       }
 
-      @include breakpoint(delta) {
+      @include breakpoint(desktopSmall) {
       }
 
-      @include breakpoint(gamma) {
+      @include breakpoint(desktopMedium) {
       }
 
-      @include breakpoint(beta) {
+      @include breakpoint(desktopLarge) {
       }
 
-      @include breakpoint(alpha) {
+      @include breakpoint(desktopXLarge) {
       }
 
-      @include breakpoint(delta) {
+      @include breakpoint(desktopSmall) {
       }
 
-      @include breakpoint(epsilon) {
+      @include breakpoint(tablet) {
         padding: 2rem;
 
         &:nth-child(2n-1) {
@@ -1243,10 +1099,10 @@ blockquote p {
         }
       }
 
-      @include breakpoint(zeta) {
+      @include breakpoint(mobileLandscape) {
       }
 
-      @include breakpoint(eta) {
+      @include breakpoint(mobile) {
         &,
         &:not(:nth-child(-n + 2)),
         &:not(:nth-child(4n + 1)) {
@@ -1267,26 +1123,26 @@ blockquote p {
           @include breakpoint(base) {
           }
 
-          @include breakpoint(delta) {
+          @include breakpoint(desktopSmall) {
           }
 
-          @include breakpoint(gamma) {
+          @include breakpoint(desktopMedium) {
           }
 
-          @include breakpoint(beta) {
+          @include breakpoint(desktopLarge) {
             font-size: 2rem;
           }
 
-          @include breakpoint(alpha) {
+          @include breakpoint(desktopXLarge) {
           }
 
-          @include breakpoint(delta) {
+          @include breakpoint(desktopSmall) {
           }
 
-          @include breakpoint(epsilon) {
+          @include breakpoint(tablet) {
           }
 
-          @include breakpoint(zeta) {
+          @include breakpoint(mobileLandscape) {
           }
         }
       }
@@ -1314,7 +1170,7 @@ blockquote p {
     position: sticky;
     top: var(--header--spacing);
     z-index: 3;
-    // background-color: var(--color--background-overlay);
+    background-color: var(--color--background-overlay);
     backdrop-filter: var(--background-blur);
     @extend .transition;
   }
@@ -1327,11 +1183,11 @@ blockquote p {
     .component_contact-form_right-column {
       padding: 4%;
       @extend .transition;
-    //   background-color: var(--color--primary--100);
+      //   background-color: var(--color--primary--100);
 
-    //   @at-root body.is-black & {
-    //     background-color: var(--color--neutral--800);
-    //   }
+      //   @at-root body.is-black & {
+      //     background-color: var(--color--neutral--800);
+      //   }
     }
   }
 }
@@ -1354,29 +1210,29 @@ blockquote p {
       .card {
         width: 37vw;
 
-        @include breakpoint(zeta) {
+        @include breakpoint(mobileLandscape) {
           width: 100%;
         }
 
         &:not(:last-child) {
           margin-right: 4.5rem;
-          @include breakpoint(delta) {
+          @include breakpoint(desktopSmall) {
           }
-          @include breakpoint(gamma) {
+          @include breakpoint(desktopMedium) {
           }
-          @include breakpoint(beta) {
+          @include breakpoint(desktopLarge) {
           }
-          @include breakpoint(alpha) {
-          }
-
-          @include breakpoint(delta) {
+          @include breakpoint(desktopXLarge) {
           }
 
-          @include breakpoint(epsilon) {
+          @include breakpoint(desktopSmall) {
+          }
+
+          @include breakpoint(tablet) {
             margin-right: 6vw;
           }
 
-          @include breakpoint(zeta) {
+          @include breakpoint(mobileLandscape) {
             margin-right: 0;
           }
         }
@@ -1392,19 +1248,19 @@ blockquote p {
           margin-right: 2rem;
         }
 
-        @include breakpoint(delta) {
+        @include breakpoint(desktopSmall) {
         }
-        @include breakpoint(gamma) {
+        @include breakpoint(desktopMedium) {
         }
-        @include breakpoint(beta) {
+        @include breakpoint(desktopLarge) {
         }
-        @include breakpoint(alpha) {
+        @include breakpoint(desktopXLarge) {
         }
-        @include breakpoint(delta) {
+        @include breakpoint(desktopSmall) {
         }
-        @include breakpoint(epsilon) {
+        @include breakpoint(tablet) {
         }
-        @include breakpoint(zeta) {
+        @include breakpoint(mobileLandscape) {
           width: 100%;
           margin-right: 0;
         }
@@ -1420,23 +1276,23 @@ blockquote p {
   }
 
   &_demo-form_component {
-    @include breakpoint(delta) {
+    @include breakpoint(desktopSmall) {
     }
-    @include breakpoint(gamma) {
+    @include breakpoint(desktopMedium) {
     }
-    @include breakpoint(beta) {
+    @include breakpoint(desktopLarge) {
     }
-    @include breakpoint(alpha) {
+    @include breakpoint(desktopXLarge) {
     }
-    @include breakpoint(delta) {
+    @include breakpoint(desktopSmall) {
     }
-    @include breakpoint(epsilon) {
+    @include breakpoint(tablet) {
       padding: var(--padding--container);
     }
 
-    @include breakpoint(zeta) {
+    @include breakpoint(mobileLandscape) {
     }
-    @include breakpoint(eta) {
+    @include breakpoint(mobile) {
       padding: unset;
     }
   }
@@ -1543,76 +1399,25 @@ blockquote p {
   // top: 0;
 }
 
-// .ratio-1-1::before {
-//   --aspect-ratio: 1/1;
-// }
-// .ratio-2-3::before {
-//   --aspect-ratio: 2/3;
-// }
-// .ratio-3-2::before {
-//   --aspect-ratio: 3/2;
-// }
-// .ratio-16-9::before {
-//   --aspect-ratio: 16/9;
-// }
-// .ratio-1792-1120::before {
-//   --aspect-ratio: 1792/1120;
-// }
-// .ratio-9-16::before {
-//   --aspect-ratio: 9/16;
-// }
-
-// div[class^=ratio] {
-//   position: relative;
-//   overflow: hidden;
-// }
-// div[class^=ratio]::before {
-//   content: "";
-//   display: inline-block;
-//   width: 1px;
-//   height: 0;
-//   padding-bottom: calc(100% / (var(--aspect-ratio)));
-// }
-// div[class^=ratio]>div {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-// }
-// *[aspect-ratio] {
-//   vertical-align: unset;
-//   object-fit: cover;
-// }
-// *[aspect-ratio="1/1"] {
-//   aspect-ratio: 1 / 1;
-// }
-// *[aspect-ratio="3/2"] {
-//   aspect-ratio: 3 / 2;
-// }
-// *[aspect-ratio="16/9"] {
-//   aspect-ratio: 16 / 9;
-// }
-
 .container-carousel {
   // padding: calc(var(--header--height) + 1px) var(--padding--container) var(--padding--container) var(--padding--container);
-//   padding: var(--padding--container);
+  //   padding: var(--padding--container);
 
-  @include breakpoint(delta) {
+  @include breakpoint(desktopSmall) {
   }
 
-  @include breakpoint(gamma) {
+  @include breakpoint(desktopMedium) {
     padding-bottom: var(--header--height);
   }
-  @include breakpoint(beta) {
+  @include breakpoint(desktopLarge) {
   }
-  @include breakpoint(alpha) {
+  @include breakpoint(desktopXLarge) {
   }
-  @include breakpoint(delta) {
+  @include breakpoint(desktopSmall) {
   }
-  @include breakpoint(epsilon) {
+  @include breakpoint(tablet) {
   }
-  @include breakpoint(zeta) {
+  @include breakpoint(mobileLandscape) {
   }
   @media (max-height: 850px) and (orientation: landscape) {
     padding-top: 1rem;
@@ -1709,6 +1514,11 @@ blockquote p {
 
 .comp-table {
   &_column {
+    @for $i from 1 through 6 {
+      &:nth-of-type(#{$i}) {
+        order: $i;
+      }
+    }
     &.is-emphasized {
       @extend .transition;
       background-color: var(--color--primary--100);
@@ -1738,14 +1548,6 @@ blockquote p {
     }
 
     @at-root body.is-solution-fund & {
-      &:nth-of-type(1) {
-        order: 1;
-      }
-
-      &:nth-of-type(2) {
-        order: 2;
-      }
-
       &:nth-of-type(3) {
         order: 4;
       }
@@ -1753,15 +1555,31 @@ blockquote p {
       &:nth-of-type(4) {
         order: 3;
       }
+    }
 
-      &:nth-of-type(5) {
+    @at-root body.is-solution-family-office & {
+      &:nth-of-type(3) {
         order: 5;
       }
 
-      &:nth-of-type(6) {
+      &:nth-of-type(5) {
         order: 6;
       }
+
+      &:nth-of-type(6) {
+        order: 3;
+      }
     }
+
+    @at-root body.is-solution-dao & {
+        &:nth-of-type(3) {
+          order: 4;
+        }
+  
+        &:nth-of-type(4) {
+          order: 3;
+        }
+      }
 
     &-shadow {
       opacity: 0;
@@ -1830,34 +1648,3 @@ blockquote p {
     }
   }
 }
-
-// .table-responsive {
-//   width: 100%;
-//   border-collapse: collapse;
-
-//   th, td {
-//     border: 1px solid var(--color-primary-300);
-//     padding: 0.75rem;
-
-//     @include breakpoint(epsilon) {
-//       padding: 0.5rem;
-//     }
-
-//     @include breakpoint(zeta) {
-//       display: block;
-//       width: 100%;
-
-//       &:first-child {
-//         margin-top: 0.5rem;
-//       }
-
-//       &:last-child {
-//         margin-bottom: 0.5rem;
-//       }
-//     }
-//   }
-
-//   th {
-//     background-color: var(--color-primary-50);
-//   }
-// }
